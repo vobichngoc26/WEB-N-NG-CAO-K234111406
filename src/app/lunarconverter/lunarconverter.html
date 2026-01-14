@@ -1,0 +1,48 @@
+<h1> Võ Bích Ngọc K234111406</h1>
+<div class="wrapper">
+  <h1>Chuyển đổi Dương lịch thành Âm lịch</h1>
+
+  <div class="controls">
+    <select [(ngModel)]="day" name="day">
+      <option *ngFor="let d of days" [value]="d">{{ d }}</option>
+    </select>
+    Ngày
+
+    <select [(ngModel)]="month" name="month">
+      <option *ngFor="let m of months" [value]="m">{{ m }}</option>
+    </select>
+    Tháng
+
+    <select [(ngModel)]="year" name="year">
+      <option *ngFor="let y of years" [value]="y">{{ y }}</option>
+    </select>
+    Năm
+
+    <button (click)="convert()">Chuyển đổi</button>
+  </div>
+
+  <h2>Âm Lịch</h2>
+
+  <table>
+    <tr>
+      <td>Thứ trong tuần</td>
+      <td class="value">{{ weekday }}</td>
+    </tr>
+    <tr>
+      <td>Ngày tháng năm âm</td>
+      <td class="value">{{ lunarDate }}</td>
+    </tr>
+    <tr>
+      <td>Năm</td>
+      <td class="value">{{ lunarYear }}</td>
+    </tr>
+    <tr>
+      <td>Tháng</td>
+      <td class="value">{{ lunarMonth }}</td>
+    </tr>
+    <tr>
+      <td>Ngày</td>
+      <td class="value">{{ lunarDay }}</td>
+    </tr>
+  </table>
+</div>
