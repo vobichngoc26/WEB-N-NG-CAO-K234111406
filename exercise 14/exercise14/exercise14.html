@@ -1,0 +1,35 @@
+<p>exercise14 works! - Võ Bích Ngọc K234111406</p>
+<div *ngFor="let cate of categories" class="category-box">
+
+  <!-- Category header -->
+  <table class="category-table">
+    <tr>
+      <th>Mã Danh Mục</th>
+      <th>Tên Danh Mục</th>
+    </tr>
+    <tr>
+      <td>{{ cate.Cateid }}</td>
+      <td>{{ cate.CateName }}</td>
+    </tr>
+  </table>
+
+  <!-- Product table -->
+  <table class="product-table">
+    <tr>
+      <th>Mã Sản Phẩm</th>
+      <th>Tên Sản Phẩm</th>
+      <th>Giá Sản Phẩm</th>
+      <th>Picture</th>
+    </tr>
+
+    <tr *ngFor="let p of cate.Products">
+      <td>{{ p.ProductId }}</td>
+      <td>{{ p.ProductName }}</td>
+      <td>{{ p.Price }}</td>
+      <td>
+        <img [src]="p.Image" width="60">
+      </td>
+    </tr>
+  </table>
+
+</div>
