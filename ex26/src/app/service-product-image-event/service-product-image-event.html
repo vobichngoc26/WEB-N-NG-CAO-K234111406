@@ -1,0 +1,23 @@
+<h1> Võ Bích Ngọc K234111406</h1>
+<table border="1">
+<tr>
+<td>Product ID</td>
+<td>Product Name</td>
+<td>UnitPrice</td>
+<td>Picture</td>
+<td>#</td>
+</tr>
+<tbody>
+<tr *ngFor="let p of products" [ngClass]="{ highlight: p.Price > 100 }">
+<td>{{ p.ProductId }}</td>
+  <td>{{ p.name }}</td>
+  <td>{{ p.price }}</td>
+  <td>
+    <img [src]="p.image" width="80">
+  </td>
+  <td>
+    <a style="cursor:pointer" (click)="viewDetail(p)">Details</a>
+  </td>
+</tr>
+</tbody>
+</table>
