@@ -1,0 +1,6 @@
+[
+    {"id":"c1","name":"Putin","age":72,"picture":"https://c.files.bbci.co.uk/EC44/production/_124648406_putin_wave_epa_crop_hi075884573.jpg"},
+    {"id":"c2","name":"Trump","age":78,"picture":"https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/250px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg"},
+    {"id":"c3","name":"Kim","age":38,"picture":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsMTfXKeR9ZMR0WvoPxpTcOxmZBCjmX5b_yVARxE_PpSC6bQdCxe-priIv2xq5ADhx7FpPnm-pU_qoGUdoV5_z14wONzy0oDHX5INe8alGYQ&s=10"},
+    {"id":"c4","name":"Tap","age":73,"picture":"https://c.files.bbci.co.uk/EC44/production/_124648406_putin_wave_epa_crop_hi075884573.jpg"}
+]
