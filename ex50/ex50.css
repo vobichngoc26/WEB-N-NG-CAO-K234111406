@@ -1,0 +1,116 @@
+h2 {
+  color: #2f6f6a;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f4fbfa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #cfeeed;
+}
+
+thead th {
+  color: #2f6f6a;
+  font-weight: 600;
+  text-align: left;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #d7eeee;
+}
+
+tbody tr:hover {
+  background-color: #e6f7f6;
+}
+
+td {
+  color: #333;
+}
+
+img {
+  border-radius: 6px;
+  border: 1px solid #b7e3df;
+}
+.title {
+  text-align: center;
+  color: #2b6777;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #52ab98;
+  margin-bottom: 20px;
+}
+
+.toolbar {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.book-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f6fdfc;
+}
+
+.book-table th {
+  background: #c8edea;
+  padding: 10px;
+  color: #1f4f5f;
+}
+
+.book-table td {
+  padding: 8px;
+  border-bottom: 1px solid #d9f2ef;
+  text-align: center;
+}
+
+.book-name {
+  font-weight: 600;
+}
+
+.desc {
+  text-align: left;
+  font-size: 14px;
+}
+
+.book-img {
+  width: 70px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #b2dfdb;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.add {
+  background: #52ab98;
+  color: white;
+}
+
+.edit {
+  background: #a3d2ca;
+  margin-right: 5px;
+}
+
+.delete {
+  background: #f4a6a6;
+  color: #721c24;
+}

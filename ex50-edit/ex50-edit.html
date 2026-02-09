@@ -1,0 +1,15 @@
+<h2>Edit Book</h2>
+
+<form *ngIf="book">
+  <input [(ngModel)]="book.BookName" name="name">
+  <input [(ngModel)]="book.Price" name="price" type="number">
+  <input [(ngModel)]="book.Image" name="image">
+  <input [(ngModel)]="book.Description" name="desc">
+  <input [(ngModel)]="book.Quantity" name="qty" type="number">
+  <input [(ngModel)]="book.UpdateDate" name="date">
+  <input [(ngModel)]="book.CDCode" name="cd">
+  <input [(ngModel)]="book.PublisherCode" name="pub">
+
+  <button type="button" (click)="update()">Update</button>
+  <button type="button" routerLink="/ex50">Cancel</button>
+</form>

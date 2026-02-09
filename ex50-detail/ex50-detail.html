@@ -1,0 +1,57 @@
+<h2>Book Detail</h2>
+
+<table border="1" cellpadding="8" cellspacing="0" *ngIf="book">
+  <tr>
+    <th>Book ID</th>
+    <td>{{ book.BookId }}</td>
+  </tr>
+
+  <tr>
+    <th>Book Name</th>
+    <td>{{ book.BookName }}</td>
+  </tr>
+
+  <tr>
+    <th>Description</th>
+    <td>{{ book.Description }}</td>
+  </tr>
+
+  <tr>
+    <th>Price</th>
+    <td>{{ book.Price }} $</td>
+  </tr>
+
+  <tr>
+    <th>Quantity</th>
+    <td>{{ book.Quantity }}</td>
+  </tr>
+
+  <tr>
+    <th>Update Date</th>
+    <td>{{ book.UpdateDate }}</td>
+  </tr>
+
+  <tr>
+    <th>CD Code</th>
+    <td>{{ book.CDCode }}</td>
+  </tr>
+
+  <tr>
+    <th>Publisher Code</th>
+    <td>{{ book.PublisherCode }}</td>
+  </tr>
+
+  <tr>
+    <th>Image</th>
+    <td>
+      <img
+        src="http://localhost:3000/images/{{ book.Image }}"
+        width="150"
+        alt="{{ book.BookName }}"
+      />
+    </td>
+  </tr>
+</table>
+
+<br>
+<button routerLink="/ex50">⬅ Back</button>

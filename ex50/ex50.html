@@ -1,0 +1,50 @@
+<h2 class="title">Võ Bích Ngọc – K234111406</h2>
+<p class="subtitle">Exercise 50 – Book Management (RESTful API)</p>
+<div class="toolbar">
+  <button class="btn add" (click)="addBook()">+ Add New Book</button>
+</div>
+
+<table class="book-table">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Image</th>
+      <th>Book Name</th>
+      <th>Description</th>
+      <th>Price ($)</th>
+      <th>Quantity</th>
+      <th>Update Date</th>
+      <th>CD Code</th>
+      <th>Publisher Code</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let b of books; let i = index">
+      <td>{{ i + 1 }}</td>
+
+      <!-- IMAGE -->
+      <td>
+        <img
+          src="http://localhost:3000/images/{{ b.Image }}"
+          alt="{{ b.BookName }}"
+          class="book-img"
+        />
+      </td>
+
+      <td class="book-name">{{ b.BookName }}</td>
+      <td class="desc">{{ b.Description }}</td>
+      <td>{{ b.Price }}</td>
+      <td>{{ b.Quantity }}</td>
+      <td>{{ b.UpdateDate }}</td>
+      <td>{{ b.CDCode }}</td>
+      <td>{{ b.PublisherCode }}</td>
+      <td class="actions">
+        <button class="btn edit" (click)="editBook(b)">Edit</button>
+        <button class="btn delete" (click)="deleteBook(b.BookId)">Delete</button>
+        <button class="btn detail" (click)="viewDetail(b)">Detail</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
