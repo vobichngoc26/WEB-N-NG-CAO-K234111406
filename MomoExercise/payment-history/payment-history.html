@@ -1,0 +1,23 @@
+<h2>Lịch sử thanh toán</h2>
+
+<table border="1">
+  <tr>
+    <th>Order ID</th>
+    <th>Số tiền</th>
+    <th>Trạng thái</th>
+    <th>Thời gian</th>
+  </tr>
+
+  <tr *ngFor="let p of payments">
+    <td>{{ p.orderId }}</td>
+    <td>{{ p.amount }} đ</td>
+    <td>
+      {{
+        p.status === 'paid' ? 'Thành công' :
+        p.status === 'failed' ? 'Thất bại' :
+        'Đang chờ'
+      }}
+    </td>
+    <td>{{ p.createdAt | date:'short' }}</td>
+  </tr>
+</table>
