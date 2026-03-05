@@ -1,0 +1,15 @@
+.cart-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
