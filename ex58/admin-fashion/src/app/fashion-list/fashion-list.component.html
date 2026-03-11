@@ -1,0 +1,36 @@
+<div class="admin-fashion-list">
+  <div class="header">
+    <h1>Fashion List</h1>
+    <a routerLink="/fashions/new" class="btn btn-add">Add New Fashion</a>
+  </div>
+  @if (loading) {
+    <p>Loading...</p>
+  } @else {
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Thumbnail</th>
+          <th>Title</th>
+          <th>Style</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (f of fashions; track f._id) {
+          <tr>
+            <td><img [src]="f.thumbnail" alt="" class="thumb" onerror="this.src='https://picsum.photos/80/60'"></td>
+            <td>{{ f.title }}</td>
+            <td>{{ f.style }}</td>
+            <td>{{ f.creationDate | date:'short' }}</td>
+            <td>
+              <a [routerLink]="['/fashions', f._id]" class="btn btn-view">View detail</a>
+              <a [routerLink]="['/fashions', f._id]" [queryParams]="{ edit: 'true' }" class="btn btn-edit">Edit</a>
+              <button (click)="delete(f._id, f.title)" class="btn btn-delete">Delete</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>

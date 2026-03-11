@@ -1,0 +1,31 @@
+<div class="client-fashion">
+  <header>
+    <h1>Fashion</h1>
+    <div class="filter-bar">
+      <input type="text" [(ngModel)]="searchText" (input)="applyFilter()" placeholder="Search by style or title...">
+      <select [(ngModel)]="selectedStyle" (change)="applyFilter()">
+        <option value="">All Styles</option>
+        @for (s of styles; track s) {
+          <option [value]="s">{{ s }}</option>
+        }
+      </select>
+    </div>
+  </header>
+  @if (loading) {
+    <p>Loading...</p>
+  } @else {
+    @for (group of groupByStyle(); track group.style) {
+      <section class="style-group">
+        <h2>{{ group.style | uppercase }}</h2>
+        <div class="grid">
+          @for (f of group.items; track f._id) {
+            <a [routerLink]="['/fashion', f._id]" class="card">
+              <img [src]="f.thumbnail" [alt]="f.title" onerror="this.src='https://picsum.photos/400/300'">
+              <p class="title">{{ f.title }}</p>
+            </a>
+          }
+        </div>
+      </section>
+    }
+  }
+</div>

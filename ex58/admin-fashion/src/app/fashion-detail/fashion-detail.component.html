@@ -1,0 +1,42 @@
+<div class="fashion-detail">
+  @if (viewMode) {
+    <h1>{{ title || 'Fashion Detail' }}</h1>
+    <a routerLink="/fashions" class="back">← Back to list</a>
+    <a [routerLink]="['/fashions', id]" [queryParams]="{edit: true}" class="btn-edit-inline">Edit</a>
+    @if (thumbnail) {
+      <img [src]="thumbnail" [alt]="title" class="detail-thumb">
+    }
+    <p class="meta">{{ style }} · {{ creationDate }}</p>
+    <div class="content" [innerHTML]="details"></div>
+  } @else {
+    <h1>{{ isEdit ? 'Edit Fashion' : 'Add New Fashion' }}</h1>
+    <a routerLink="/fashions" class="back">← Back to list</a>
+    <form (ngSubmit)="save()" class="form">
+      <div class="field">
+        <label>Fashion Title *</label>
+        <input [(ngModel)]="title" name="title" required>
+      </div>
+      <div class="field">
+        <label>Fashion Details (WYSIWYG)</label>
+        <ckeditor [(ngModel)]="details" [editor]="Editor" name="details"></ckeditor>
+      </div>
+      <div class="field">
+        <label>Thumbnail URL</label>
+        <input [(ngModel)]="thumbnail" name="thumbnail" type="url" placeholder="https://...">
+      </div>
+      <div class="field">
+        <label>Fashion's Style *</label>
+        <select [(ngModel)]="style" name="style" required>
+          <option value="">-- Select --</option>
+          @for (s of styles; track s) {
+            <option [value]="s">{{ s }}</option>
+          }
+        </select>
+      </div>
+      <div class="actions">
+        <button type="submit" [disabled]="loading">{{ loading ? 'Saving...' : 'Save' }}</button>
+        <a routerLink="/fashions" class="btn-cancel">Cancel</a>
+      </div>
+    </form>
+  }
+</div>

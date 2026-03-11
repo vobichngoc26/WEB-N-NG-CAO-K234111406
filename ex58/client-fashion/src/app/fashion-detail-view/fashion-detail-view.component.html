@@ -1,0 +1,13 @@
+<div class="detail-view">
+  @if (loading) {
+    <p>Loading...</p>
+  } @else if (fashion) {
+    <a routerLink="/" class="back">← Back</a>
+    <h1>{{ fashion.title }}</h1>
+    <p class="meta">{{ fashion.style }} · {{ fashion.creationDate | date:'mediumDate' }}</p>
+    @if (fashion.thumbnail) {
+      <img [src]="fashion.thumbnail" [alt]="fashion.title" class="thumb">
+    }
+    <div class="content" [innerHTML]="safeDetails"></div>
+  }
+</div>
