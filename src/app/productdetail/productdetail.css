@@ -1,0 +1,52 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+th {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  color: #2c3e50;
+  padding: 14px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Body */
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Zebra rows */
+tbody tr:nth-child(even) {
+  background-color: #f6f9fc;
+}
+
+/* Hover */
+tbody tr:hover {
+  background-color: #eaf2ff;
+  transition: 0.3s;
+}
+
+/* Image */
+td img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Price nổi bật */
+td:nth-child(3) {
+  font-weight: 600;
+  color: #6a5acd;
+}

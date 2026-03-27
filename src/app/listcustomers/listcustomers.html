@@ -1,0 +1,25 @@
+<h1> Võ Bích Ngọc K234111406</h1>
+<div *ngFor="let group of customerGroups">
+  <h2>{{ group.CustomterTypeName }}</h2>
+
+  <table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Image</th>
+    </tr>
+
+    <tr *ngFor="let c of group.Customers">
+      <td>{{ c.Id }}</td>
+      <td>{{ c.Name }}</td>
+      <td>{{ c.Email }}</td>
+      <td>{{ c.Age }}</td>
+      <td>
+        <img [src]="c.Image" width="80">
+      </td>
+    </tr>
+  </table>
+  <br>
+</div>
